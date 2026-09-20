@@ -1,9 +1,9 @@
-from django import template
+#from django import template
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
-from django.template import context
+#from django.template import context
 from django.http import HttpResponse
-from django.template import loader
+#from django.template import loader
 
 from .models import Produto
 
@@ -27,13 +27,19 @@ def produto(request,pk):
     }
     return render(request,'produto.html',context)
 
-def pagina_nao_encontrada(request,exception):
+def pagina_nao_encontrada(request,exception:None):
     """trata o erro 404"""
-    return render(request,'404.html',status=404)
+    try:
+        return render(request,'404.html',status=404)
+    except Exception:
+        return HttpResponse("<h1>Pagina não Encontrada (Erro 404)</h1>",status=404)
 
 def erro_interno_servidor(request):
-    """trata o erro 500"""
-    return render(request,'500.html',status=500)
+    try:
+        """trata o erro 500"""
+        return render(request,'500.html',status=500)
+    except Exception:
+        return HttpResponse("<h1> Erro Interno do Servior (Erro 500)</h1>",status=500)
 
 '''def error404(request,exception):
     template = loader.get_template('404.html')
