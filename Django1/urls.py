@@ -16,13 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import handler404,handler500
+from django.views import pagina_nao_encontrada,erro_interno_servidor
 from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('core.urls')),
+   # path('', include('core.urls')),
 ]
 
-'''handler404 = views.error404
-handler500 = views.error500'''
+handler404 = pagina_nao_encontrada
+handler500 = erro_interno_servidor
