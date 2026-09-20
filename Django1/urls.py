@@ -24,5 +24,5 @@ urlpatterns = [
    # path('', include('core.urls')),
 ]
 
-handler404 = 'django.views.pagina_nao_encontrada'
-handler500 = 'django.views.erro_interno_servidor'
+handler404 = 'Django1.views.pagina_nao_encontrada'
+handler500 = 'Django1.views.erro_interno_servidor'
