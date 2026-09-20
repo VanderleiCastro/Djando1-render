@@ -24,5 +24,5 @@ urlpatterns = [
     path('', include('core.urls')),
 ]
 
-handler404 = views.error404
-handler500 = views.error500
+'''handler404 = views.error404
+handler500 = views.error500'''
