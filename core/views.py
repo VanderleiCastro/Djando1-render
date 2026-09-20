@@ -27,10 +27,10 @@ def produto(request,pk):
     }
     return render(request,'produto.html',context)
 
-'''def error404(request,exception):
+def error404(request,exception):
     template = loader.get_template('404.html')
     return HttpResponse(content=template.render(),content_type='text/html; charset=utf8', status=404)
 
 def error500(request):
     template = loader.get_template('500.html')
-    return HttpResponse(content=template.render(),content_type='text/html; charset=utf8', status=500)'''
+    return HttpResponse(content=template.render(),content_type='text/html; charset=utf8', status=500)
