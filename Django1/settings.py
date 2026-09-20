@@ -28,10 +28,10 @@ SECRET_KEY = 'django-insecure-)q%p)!_18=u^j_8i1h=)ag@%ud*8q)74zd9^$!p#@=m)b+qd7=
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG com valor True é modo desenvolvimento
 # DEBUG com valor False é modo de produção
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-#ALLOWED_HOSTS = ['djando1-render.onrender.com']
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['djando1-render.onrender.com']
 
 
 # Application definition
