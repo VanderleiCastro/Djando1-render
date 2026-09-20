@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.template.backends import django
 from django.urls import path, include
+from core.views import pagina_nao_encontrada,erro_interno_servidor
 from core import views
 
 urlpatterns = [
@@ -24,5 +25,5 @@ urlpatterns = [
    # path('', include('core.urls')),
 ]
 
-handler404 = 'Django1.views.pagina_nao_encontrada'
-handler500 = 'Django1.views.erro_interno_servidor'
+handler404 = pagina_nao_encontrada
+handler500 = erro_interno_servidor
